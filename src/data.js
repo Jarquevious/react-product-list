@@ -1,9 +1,12 @@
 import data from './data.json'
 
-const nameList = data.map((category) => {
-    return {category}
-})
-console.log(nameList)
+const allCategories = data.map( (item) => item.category )
+console.log(allCategories)
+
+export { 
+    allCategories
+}
+
 
 
 
