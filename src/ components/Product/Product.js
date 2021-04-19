@@ -1,27 +1,32 @@
 import React from 'react'
-import React from 'react'
-import { categoriesUnique } from '../../data.js';
+import { categoriesUnique, productCount } from '../../data.js';
 
-export default function Products(props) {
+function Product(props) {
     const { setCategory } = props
     // a list of buttons 
-    const display_cat = categoriesUnique.map((item, productCount) => {
+    const display_category = categoriesUnique.map((item, productCount) => {
         return (
-            <button
-                className="button"
-                key={productCount}
-                onClick={() => {
-                    setCategory(item)
+            <div>
+                <button
+                    className="button-items"
+                    onClick={() => {
+                        setCategory(item)
 
-                }}
-            >{item}
-            </button>
-            
+                    }}
+                >{item}{productCount}
+                </button>
+                <button
+                    category={'all'}
+                    onClick={() => {
+                        return setCategory('all')
+                    }} />
+            </div>
         )
     })
     return (
         <div>
-            {display_cat}
+            {display_category}
         </div>
     )
 }
+export default Product

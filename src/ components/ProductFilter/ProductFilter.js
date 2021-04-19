@@ -1,6 +1,5 @@
 import React from 'react'
 import data from '../../data.js';
-import './ProductFilter.css';
 
 export default function ProductFilter(props) {
 
