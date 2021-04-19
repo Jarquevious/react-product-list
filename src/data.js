@@ -56,14 +56,27 @@ console.log(categoriesWithCounts)
 //          be unique and each should only appear once! 
 //          TASK: Create an object where each key is a category name.               
 // ----------------------------------------------------------------------------------------
-const nameCount = categoriesUnique.reduce((acc, cat) => {
-    acc.push({ name: cat, count: categoriesWithCounts[cat] })
+const productCount = categoriesUnique.reduce((acc, category) => {
+    acc.push({ name: category, count: categoriesWithCounts[category] })
     return acc
   }, [])
 
 
-console.log(nameCount)
+console.log(productCount)
+
+// ----------------------------------------------------------------------------------------
+//          Challenge 6 - Export all of the data you have collected. 
+
+//            Task:  
+//                 1. Export the data array as the default export. This array you imported  
+//                    from data.json. You can just export it unchanged. 
+//                 2. Make sure you've given each of the other arrays and objects you've 
+//                    created good descriptive names and export those.              
+// ----------------------------------------------------------------------------------------
+
+
+
 
 
 export default data 
-
+export { categoriesWithCounts, categoriesUnique, productCount }
