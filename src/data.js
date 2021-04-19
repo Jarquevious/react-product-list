@@ -27,7 +27,7 @@ const categoriesObj = allCategories.reduce((obj, category) => {
 }, {})
 const categoriesUnique = Object.keys(categoriesObj)
 
-// console.log(categoriesUnique)
+console.log(categoriesUnique)
 
 
 // ----------------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ const categoriesWithCounts = data.reduce((obj, category) => {
     }
     return obj
 }, [])
-console.log(categoriesWithCounts)
+console.log('cate', categoriesWithCounts)
 // ----------------------------------------------------------------------------------------
 //          Challenge 5 - Use Reduce to make an array of objects that have a name and 
 //          a count. 
@@ -73,10 +73,5 @@ console.log(productCount)
 //                 2. Make sure you've given each of the other arrays and objects you've 
 //                    created good descriptive names and export those.              
 // ----------------------------------------------------------------------------------------
-
-
-
-
-
 export default data 
 export { categoriesWithCounts, categoriesUnique, productCount }
