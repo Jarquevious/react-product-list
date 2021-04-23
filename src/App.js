@@ -13,6 +13,19 @@ function App() {
     return <button>{category}</button>
       })}
 
+      <div>
+        { data.map((data) => {
+          return (
+          <div>
+            <h1>{ data.name } </h1>
+            <h2>{ data.category }</h2>
+            <h3>{ data.price }</h3>
+
+          </div>
+        )})} 
+      </div>
+      
+    
         <button></button> 
       </div>
     
