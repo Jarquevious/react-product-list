@@ -6,14 +6,18 @@ import './App.css';
 categoriesUnique.push('all')
 
 function App() {
+  
   const [category, setCategory] = useState('all')
+  
 
   return (
     <div className="App">
       <h1>{ category }</h1>
       <div className="App-header" >
-        {categoriesUnique.map((category) => {
+        {categoriesUnique.map(( category ) => {
           return <button
+                  size="sm"
+                  variant="secondary"
                   className="category-button"
                   onClick = { () => {
                     setCategory(category)
