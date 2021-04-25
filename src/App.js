@@ -2,6 +2,9 @@ import data, { categoriesUnique } from './data'
 import React, { useState } from 'react';
 // categoriesWithCounts,, productCount 
 import './App.css';
+import Card from 'react-bootstrap/Card'
+import Footer from './footer'
+
 
 categoriesUnique.push('all')
 
@@ -11,11 +14,13 @@ function App() {
   
 
   return (
+    
     <div className="App">
-      <h1>{ category }</h1>
-      <div className="App-header" >
+      <div className="nav"><h1>Nav</h1></div>
+      <div className="App-header">
         {categoriesUnique.map(( category ) => {
-          return <button
+          return (
+                <button
                   size="sm"
                   variant="secondary"
                   className="category-button"
@@ -23,23 +28,31 @@ function App() {
                     setCategory(category)
                   }}
           >{category}</button>
-        })}
-
-        <div className="Products">
-          {data.filter( (item) => {
-            return item.category === category || category === 'all'
-          }).map((data) => {
-            return (
-              <div className="product">
-                <h1>{data.name} </h1>
-                <h2>{data.category}</h2>
-                <h3>{data.price}</h3>
-              </div>
+        )})}</div>
+        <div className="blue">
+          <h1>
+            { category }
+          </h1>
+        </div>
+          <div className="Products">
+            {data.filter( (item) => {
+              return item.category === category || category === 'all'
+            }).map((data) => {
+              return (
+                <div className="product">
+                  <Card className="Card">
+                    <h1>{data.name} </h1>
+                    <h2>{data.category}</h2>
+                    <h3>{data.price}</h3> 
+                  </Card>           
+                </div>
             )
           })}
+          
         </div>
-      </div>
+      
       <data />
+      <Footer/>
     </div>
   );
 }
