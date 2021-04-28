@@ -1,6 +1,6 @@
 .App {
   padding: 1em;
-  background-color: #282c34;
+  background-color: rgb(184, 180, 180);
   
 }
 .App-header {
@@ -19,7 +19,7 @@
 
 .nav{
   height: 4em;
-  background-color: lavenderblush;
+  background-color: rgb(241, 241, 241);
 }
 
 .blue {

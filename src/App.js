@@ -1,9 +1,10 @@
-import data, { categoriesUnique } from './data'
+import data, { categoriesUnique, productCount} from './data'
 import React, { useState } from 'react';
-// categoriesWithCounts,, productCount 
+// categoriesWithCounts,,  
 import './App.css';
 import Card from 'react-bootstrap/Card'
-import Footer from './footer'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
 
 
 categoriesUnique.push('all')
@@ -16,14 +17,16 @@ function App() {
   return (
     
     <div className="App">
-      <div className="nav"><h1>Nav</h1></div>
+      <Navbar />
       <div className="App-header">
+        
         {categoriesUnique.map(( category ) => {
           return (
                 <button
                   size="sm"
                   variant="secondary"
                   className="category-button"
+                  key={productCount}
                   onClick = { () => {
                     setCategory(category)
                   }}
